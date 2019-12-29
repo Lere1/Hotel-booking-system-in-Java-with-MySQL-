@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="463.0" prefWidth="798.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller2Hotel">
+   <children>
+      <TableView fx:id="tableView" layoutX="14.0" layoutY="14.0">
+        <columns>
+          <TableColumn fx:id="customerRefColumn" prefWidth="45.0" text="Customer Ref" />
+          <TableColumn fx:id="firstNameColumn" prefWidth="60.0" text="First Name" />
+            <TableColumn fx:id="lastNameColumn" prefWidth="60.0" text="Last Name" />
+            <TableColumn fx:id="genderColumn" prefWidth="44.0" text="Gender" />
+            <TableColumn fx:id="addressColumn" prefWidth="90.0" text="Address" />
+            <TableColumn fx:id="postCodeColumn" prefWidth="41.0" text="Post Code" />
+            <TableColumn fx:id="nationalityColumn" minWidth="3.0" prefWidth="43.0" text="Nationality" />
+            <TableColumn fx:id="dateOfBirthColumn" prefWidth="49.0" text="Date of Birth" />
+            <TableColumn fx:id="mobileNoColumn" prefWidth="49.0" text="Mobile No" />
+            <TableColumn fx:id="emailColumn" minWidth="0.0" prefWidth="46.0" text="Email" />
+            <TableColumn fx:id="numberOfPeopleColumn" prefWidth="57.0" text="Number of People" />
+            <TableColumn fx:id="numberOfRoomsColumn" prefWidth="48.0" text="Number of Rooms" />
+            <TableColumn fx:id="roomTypeColumn" minWidth="0.0" prefWidth="53.0" text="Room Type" />
+            <TableColumn fx:id="idTypeColumn" prefWidth="45.0" text="ID Type" />
+            <TableColumn fx:id="checkInDateColumn" prefWidth="63.0" text="Check-in Date" />
+            <TableColumn fx:id="checkOutDateColumn" prefWidth="63.0" text="Check-out Date" />
+            <TableColumn fx:id="totalCostColumn" prefWidth="63.0" text="Total Cost" />
+        </columns>
+      </TableView>
+      <Button fx:id="btMainPage" layoutX="623.0" layoutY="438.0" mnemonicParsing="false" onAction="#changeScreen" text="Main Page" />
+      <Button fx:id="btDelete" layoutX="532.0" layoutY="438.0" mnemonicParsing="false" onAction="#delete" text="Delete" />
+   </children>
+</AnchorPane>

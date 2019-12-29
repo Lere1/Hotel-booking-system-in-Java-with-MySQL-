@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller1Hotel">
+   <children>
+      <Label layoutX="262.0" layoutY="14.0" text="Hotel Booking System">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Separator layoutX="257.0" layoutY="40.0" prefWidth="200.0" />
+      <Pane layoutX="14.0" layoutY="57.0" prefHeight="357.0" prefWidth="674.0">
+         <children>
+            <Label layoutX="259.0" layoutY="4.0" text="Customer's Information">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="4.0" layoutY="28.0" text="Customer Ref:" />
+            <Label layoutY="58.0" text="First Name:" />
+            <Label layoutY="86.0" text="Last Name:" />
+            <Label layoutY="116.0" text="Gender:" />
+            <Label layoutY="147.0" text="Address:" />
+            <Label layoutY="177.0" text="Post Code:" />
+            <Label layoutY="208.0" text="Nationality:" />
+            <Label layoutY="237.0" text="Date of Birth:" />
+            <Label layoutX="353.0" layoutY="58.0" text="Email:" />
+            <Label layoutX="351.0" layoutY="86.0" text="Number of People:" />
+            <TextField fx:id="tfCustomerRef" layoutX="96.0" layoutY="24.0" prefHeight="10.0" prefWidth="149.0" />
+            <TextField fx:id="tfFirstName" layoutX="96.0" layoutY="54.0" prefHeight="10.0" prefWidth="149.0" />
+            <Label layoutX="351.0" layoutY="33.0" text="Mobile No:" />
+            <Label layoutX="352.0" layoutY="147.0" text="Room Type:" />
+            <Label layoutX="352.0" layoutY="177.0" text="ID Type:" />
+            <Label layoutX="351.0" layoutY="208.0" text="Check-in Date:" />
+            <Label layoutX="352.0" layoutY="237.0" text="Check-out Date:" />
+            <Label layoutX="352.0" layoutY="116.0" text="Number of Rooms" />
+            <TextField fx:id="tfLastName" layoutX="96.0" layoutY="82.0" prefHeight="10.0" prefWidth="149.0" />
+            <TextField fx:id="tfAddress" layoutX="94.0" layoutY="143.0" prefHeight="10.0" prefWidth="149.0" />
+            <TextField fx:id="tfPostCode" layoutX="94.0" layoutY="173.0" prefHeight="10.0" prefWidth="149.0" />
+            <TextField fx:id="tfNationality" layoutX="94.0" layoutY="204.0" prefHeight="10.0" prefWidth="149.0" />
+            <TextField fx:id="tfMobileNo" layoutX="463.0" layoutY="24.0" prefHeight="10.0" prefWidth="149.0" />
+            <TextField fx:id="tfEmail" layoutX="463.0" layoutY="54.0" prefHeight="10.0" prefWidth="149.0" />
+            <TextField fx:id="tfNumberOfPeople" layoutX="463.0" layoutY="82.0" prefHeight="10.0" prefWidth="149.0" />
+            <TextField fx:id="tfNumberOfRooms" layoutX="463.0" layoutY="111.0" prefHeight="10.0" prefWidth="149.0" />
+            <TextField fx:id="tfIdType" layoutX="463.0" layoutY="173.0" prefHeight="10.0" prefWidth="149.0" />
+            <DatePicker fx:id="dtDateOfBirth" layoutX="94.0" layoutY="233.0" prefHeight="10.0" prefWidth="149.0" />
+            <DatePicker fx:id="dtCheckInDate" layoutX="463.0" layoutY="204.0" prefHeight="10.0" prefWidth="149.0" />
+            <DatePicker fx:id="dtCheckOutDate" layoutX="463.0" layoutY="233.0" prefHeight="10.0" prefWidth="149.0" />
+            <Label layoutX="269.0" layoutY="271.0" text="Make Payments">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="-2.0" layoutY="302.0" text="Payment Method:" />
+            <ComboBox fx:id="cmbPaymentMethod" layoutX="97.0" layoutY="298.0" prefHeight="25.0" prefWidth="85.0">
+              <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:id="myCash" fx:value="Cash" />
+                    <String fx:id="myDebitCard" fx:value="Debit Card" />
+                    <String fx:id="myMasterCard" fx:value="Master Card" />
+                    <String fx:id="myVisaCard" fx:value="Visa Card" />
+                </FXCollections>
+              </items>
+            </ComboBox>
+            <ComboBox fx:id="cmbGender" layoutX="94.0" layoutY="112.0" prefWidth="150.0">            
+              <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:id="myMale" fx:value="Male" />
+                    <String fx:id="myFemale" fx:value="Female" />
+                </FXCollections>
+              </items>
+            </ComboBox>
+            <ComboBox fx:id="cmbRoomType" layoutX="463.0" layoutY="143.0" prefWidth="150.0">
+              <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:id="mySingle" fx:value="Single" />
+                    <String fx:id="myDouble" fx:value="Double" />
+                    <String fx:id="myKing" fx:value="King" />
+                    <String fx:id="myQueen" fx:value="Queen" />
+                </FXCollections>
+              </items>
+            </ComboBox>
+            <Label layoutX="209.0" layoutY="302.0" text="Subtotal:" />
+            <TextField fx:id="tfSubTotal" layoutX="269.0" layoutY="298.0" prefHeight="25.0" prefWidth="63.0" />
+            <Label layoutX="363.0" layoutY="302.0" text="Tax:" />
+            <TextField fx:id="tfTax" layoutX="397.0" layoutY="298.0" prefHeight="25.0" prefWidth="63.0" />
+            <Label layoutX="487.0" layoutY="302.0" text="Total:" />
+            <TextField fx:id="tfTotal" layoutX="528.0" layoutY="298.0" prefHeight="25.0" prefWidth="85.0" />
+         </children>
+      </Pane>
+      <Button fx:id="btTotalCost" layoutX="33.0" layoutY="436.0" mnemonicParsing="false" onAction="#totalCost" text="Total Cost">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btUpdate" layoutX="146.0" layoutY="436.0" mnemonicParsing="false" onAction="#update" prefHeight="30.0" prefWidth="77.0" text="Update">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btReset" layoutX="248.0" layoutY="436.0" mnemonicParsing="false" onAction="#reset" prefHeight="30.0" prefWidth="69.0" text="Reset">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btDelete" layoutX="351.0" layoutY="436.0" mnemonicParsing="false" onAction="#delete" text="Delete">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btExit" layoutX="441.0" layoutY="436.0" mnemonicParsing="false" onAction="#exit" prefHeight="30.0" prefWidth="70.0" text="Exit">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btDataPage" layoutX="542.0" layoutY="436.0" mnemonicParsing="false" onAction="#changeScreen" prefHeight="30.0" prefWidth="74.0" text="Data Page" />
+   </children>
+</AnchorPane>
